@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { Apollo, gql } from 'apollo-angular';
 import { PocketAuthService } from '@services/pocket-auth.service';
 import { ImageUploadService } from '@services/image-upload.service';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/enviroments/environment';
 @Injectable({
   providedIn: 'root',
 })
