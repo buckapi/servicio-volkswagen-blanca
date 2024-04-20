@@ -16,6 +16,10 @@ import { LoginComponent } from './components/login/login.component';
 import { UserPaymentsComponent } from './components/user-payments/user-payments.component';
 import { UserRequestsComponent } from './components/user-requests/user-requests.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { FooterComponent } from './components/ui/footer/footer.component';
+import { HeaderComponent } from './components/ui/header/header.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 @Component({
@@ -34,6 +38,10 @@ import { SettingsComponent } from './components/settings/settings.component';
     LoginComponent,
     UserRequestsComponent,
     SettingsComponent,
+    FooterComponent,
+    HeaderComponent,
+    SignInComponent,
+    SignUpComponent
     
   ],
   templateUrl: './app.component.html',
@@ -65,7 +73,7 @@ export class AppComponent {
       .catch(error => console.log(error));
       this.global.getConfig();
       this.epicFunction();
-      this.global.isLogin();
+      // this.global.isLogin();
 
     }
     ngOnInit(): void {
@@ -81,7 +89,16 @@ export class AppComponent {
       );
       this.global.getEmployes().subscribe(
         (data) => {
-          this.global.employes = data; // Asigna los registros obtenidos a la variable 'registros'
+          this.global.employes = data.items; // Asigna los registros obtenidos a la variable 'registros'
+          // console.log(data); // respuesta
+        },
+        (error) => {
+          console.error(error); // Manejo de errores si la solicitud falla
+        }
+      );
+      this.global.getCategories().subscribe(
+        (data) => {
+          this.global.categories = data.items; // Asigna los registros obtenidos a la variable 'registros'
           // console.log(data); // respuesta
         },
         (error) => {

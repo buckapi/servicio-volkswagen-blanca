@@ -1,0 +1,31 @@
+<div class="account__login register">
+    <div class="account__login--header mb-25">
+        <h2 class="account__login--header__title mb-10">Registro</h2>
+        <p class="account__login--header__desc">Regístrate como nuevo usuario</p>
+    </div>
+    <div class="account__login--inner">
+        <label>
+            <input class="account__login--input" placeholder="Nombre de usuario" type="text">
+        </label>
+        <label>
+            <input class="account__login--input" placeholder="Email " type="email">
+        </label>
+        <label>
+            <input class="account__login--input" placeholder="Contraseña" type="password">
+        </label>
+        <label>
+            <input class="account__login--input" placeholder="Confirmar contraseña" type="password">
+        </label>
+        <button class="account__login--btn primary__btn mb-10" >Aceptar y enviar</button>
+        
+        <div class="account__login--remember position__relative">
+            <input class="checkout__checkbox--input" id="check2" type="checkbox">
+            <span class="checkout__checkbox--checkmark"></span>
+            <label class="checkout__checkbox--label login__remember--label" for="check2">
+                He leído y acepto los términos y condiciones
+            </label>
+        </div>
+        <div class="account__login--divide"></div>
+        <p class="account__login--signup__text">Ya tienes cuenta? <span style="color: red; cursor: pointer;" (click)="global.signIn()">Inicia sesión</span></p>
+    </div>
+</div>

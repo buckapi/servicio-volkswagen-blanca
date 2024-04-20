@@ -15,15 +15,27 @@ import { ImageUploadService } from '@services/image-upload.service';
   providedIn: 'root',
 })
 export class GlobalService {
-
   private apiUrl = 'http://localhost:8090/api/collections/images/records';
-
-  
-  private apirestUrl = 'http://localhost:7777/api/';
+  private apirestUrl = 'http://localhost:8090/api/';
   employes: any[] = [];
+  registring: boolean = false;
   configs: any[] = [];
-
-  info: any[] = [];
+  modaltype='login';
+  info = {
+    name: '',
+    logo: '',
+    primaryColor: '',
+    topSale: false,
+    cortina: false,
+    popular: false,
+    populeri: false,
+    deal: false,
+    banners: false,
+    slider: false,
+    categories: false,
+    special: false,
+    multilenguage: false,
+  };
   categories: any[] = [];
   currentPage: number = 1;
   clients: any;
@@ -31,8 +43,6 @@ export class GlobalService {
   currentUser: any;
   ordersSize = 0;
   selectedFile: File | null = null;
-
- 
   clientDetail: { clrepresentante: any }[] = [];
   constructor(
     private apollo: Apollo,
@@ -45,50 +55,55 @@ export class GlobalService {
     public dataApiService: DataApiService,
     private imageUploadService: ImageUploadService
   ) {}
-  
-
   //################## INICIO FUNCIONES NUEVAS ########################################################################
- 
   getConfig(): Observable<any | boolean> {
-    return this.http.get<any>(this.apirestUrl + 'configs').pipe(
-      map(response => {
-        return response.length > 0; // Devuelve true si hay al menos un atributo en la respuesta
-      })
-    );
+    return this.http
+      .get<any>(this.apirestUrl + 'collections/svbConfig/records')
+      .pipe(
+        map((response) => {
+          this.info = response.items[0].info;
+          console.log(response.items[0].info);
+          return response.items.length > 0; // Devuelve true si hay al menos un atributo en la respuesta
+        })
+      );
+  }
+  signUp(){
+    this.registring=true;
+  }
+  signIn(){
+    this.registring=false;
   }
   getEmployes(): Observable<any> {
-    return this.http.get<any>(this.apirestUrl + 'employes');
+    return this.http.get<any>(this.apirestUrl + 'collections/svbProducts/records');
   }
- 
-
-
+  getCategories(): Observable<any> {
+    return this.http.get<any>(this.apirestUrl + 'collections/svbCategories/records');
+  }
 
   isLogin() {
     // Obtener el valor de isLoggedin del localStorage
     const isLoggedIn = localStorage.getItem('isLoggedin');
     const type = localStorage.getItem('type');
     const settings = localStorage.getItem('settings');
-  
-    this.getConfig().subscribe(config => {
+    this.getConfig().subscribe((config) => {
       if (isLoggedIn === null || isLoggedIn === undefined) {
         // Si no existe, redirigir a la página de inicio de sesión
-        this.virtuallRouter.routerActive = "login";
+        this.virtuallRouter.routerActive = 'login';
       } else {
         // Si existe, verificar el valor de type
         if (type === 'admin') {
           // Si es admin, redirigir a la página de inicio de administrador
-          this.virtuallRouter.routerActive = "admin-home";
+          this.virtuallRouter.routerActive = 'admin-home';
         } else if (type === 'employe') {
           // Si es empleado, redirigir a la página de inicio de usuario
-          this.virtuallRouter.routerActive = "user-home";
+          this.virtuallRouter.routerActive = 'user-home';
         } else {
           // Si es un valor diferente, también puedes redirigir a una página predeterminada o manejarlo de otra manera según sea necesario
-          console.error("Tipo de usuario desconocido");
+          console.error('Tipo de usuario desconocido');
         }
       }
-  
       if (!config) {
-        this.virtuallRouter.routerActive = "settings";
+        this.virtuallRouter.routerActive = 'settings';
       }
     });
     // No hacer nada si isLoggedin es true (ya logueado)
@@ -97,33 +112,26 @@ export class GlobalService {
   goToPage(page: number): void {
     this.currentPage = page;
   }
-
- 
-
-  
   onUpload() {
-    console.log( "esta es la imagen:"+this.selectedFile);
+    console.log('esta es la imagen:' + this.selectedFile);
     if (!this.selectedFile) {
       console.error('No se ha seleccionado ningún archivo.');
       return;
     }
-
     this.imageUploadService.uploadImage(this.selectedFile).subscribe(
-      response => {
+      (response) => {
         console.log('Imagen subida correctamente:', response);
         // Aquí puedes manejar la respuesta del servidor, como mostrar un mensaje de éxito
       },
-      error => {
+      (error) => {
         console.error('Error al subir imagen:', error);
         // Aquí puedes manejar cualquier error que ocurra durante la carga de la imagen
       }
     );
-    }
-    onFileChanged(event:Event) {
-      this.selectedFile = (event.target as HTMLInputElement).files?.[0] || null;
-    }
-  
-    
+  }
+  onFileChanged(event: Event) {
+    this.selectedFile = (event.target as HTMLInputElement).files?.[0] || null;
+  }
 
   ClientFicha(): any {
     let client_string = localStorage.getItem('clientFicha');

@@ -2,7 +2,6 @@ import PocketBase from 'pocketbase';
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { UserInterface } from '@app/interfaces/user-interface';
-
 @Injectable({
   providedIn: 'root'
 })

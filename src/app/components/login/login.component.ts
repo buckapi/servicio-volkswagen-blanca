@@ -9,10 +9,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 import { AbstractControl, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { PocketAuthService } from '@app/services/pocket-auth.service';
+import { RegisterComponent } from '../register/register.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
+import { SignInComponent } from '../sign-in/sign-in.component';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,NgxSpinnerModule],
+  imports: [CommonModule,ReactiveFormsModule,NgxSpinnerModule,SignUpComponent,SignInComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

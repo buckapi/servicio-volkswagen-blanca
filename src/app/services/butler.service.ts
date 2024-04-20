@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 // import { AnyObject } from 'chart.js/types/basic';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -54,7 +53,6 @@ export class Butler {
     review:boolean=false;
     newPartImage:boolean=false;
     newCarImage:boolean=false;
-
     newUploaderImage:boolean=false;
     profileImageLoaded:boolean=false;
     carsSelected:boolean=true;

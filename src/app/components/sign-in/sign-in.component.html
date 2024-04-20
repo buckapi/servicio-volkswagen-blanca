@@ -1,0 +1,33 @@
+<div class="account__login">
+    <div class="account__login--header mb-25">
+        <h2 class="account__login--header__title mb-10">Inicio de sesión</h2>
+        <p class="account__login--header__desc">Inicia sesión para ingresar</p>
+    </div>
+    <div class="account__login--inner">
+        <label>
+            <input class="account__login--input" placeholder="Email" type="email">
+        </label>
+        <label>
+            <input class="account__login--input" placeholder="Contraseña" type="password">
+        </label>
+        <div class="account__login--remember__forgot mb-15 d-flex justify-content-between align-items-center">
+            <div class="account__login--remember position__relative">
+                <input class="checkout__checkbox--input" id="check1" type="checkbox">
+                <span class="checkout__checkbox--checkmark"></span>
+                <label class="checkout__checkbox--label login__remember--label" for="check1">
+                    Recordarme</label>
+            </div>
+            <button class="account__login--forgot"  >Olvidó su contraseña?</button>
+        </div>
+        <button class="account__login--btn primary__btn" style="background-color: {{global.info.primaryColor}};" >Entrar</button>
+        <div class="account__login--divide">
+            <!-- <span class="account__login--divide__text">O</span> -->
+        </div>
+        <div class="account__social d-flex justify-content-center mb-15">
+            <!-- <a class="account__social--link facebook" target="_blank" href="https://www.facebook.com">Facebook</a> -->
+            <!-- <a class="account__social--link google" target="" href="">Inicia sessión con Google</a> -->
+            <!-- <a class="account__social--link twitter" target="_blank" href="https://twitter.com">Twitter</a> -->
+        </div>
+        <p class="account__login--signup__text">No tienes cuenta aún? <span style="color: red; cursor: pointer;" (click)="global.signUp()">Regístrate</span></p>
+    </div>
+</div>
