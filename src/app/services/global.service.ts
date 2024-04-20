@@ -10,13 +10,14 @@ import { HttpClient } from '@angular/common/http';
 import { Apollo, gql } from 'apollo-angular';
 import { PocketAuthService } from '@services/pocket-auth.service';
 import { ImageUploadService } from '@services/image-upload.service';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class GlobalService {
-  private apiUrl = 'http://localhost:8090/api/collections/images/records';
-  private apirestUrl = 'http://localhost:8090/api/';
+
+  private apiUrl = environment.apiUrl;
+  private apirestUrl = environment.apirestUrl;
   employes: any[] = [];
   registring: boolean = false;
   configs: any[] = [];
