@@ -20,7 +20,13 @@ import { FooterComponent } from './components/ui/footer/footer.component';
 import { HeaderComponent } from './components/ui/header/header.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-
+import { AuthRESTService } from './services/auth-rest.service';
+import { ModalQuickComponent } from './components/modales/modal-quick/modal-quick.component';
+import { ModalLoginComponent } from './components/modales/modal-login/modal-login.component';
+import { ModalAddProductComponent } from './components/modales/modal-add-product/modal-add-product.component';
+import { DemoFilePickerAdapter } from  '@app/file-picker.adapter';
+import { UploaderCaptions } from 'ngx-awesome-uploader';
+import { AboutComponent } from './components/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -41,7 +47,11 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FooterComponent,
     HeaderComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    ModalQuickComponent,
+    ModalLoginComponent,
+    ModalAddProductComponent,
+    AboutComponent,
     
   ],
   templateUrl: './app.component.html',
@@ -55,7 +65,8 @@ export class AppComponent {
     private deviceService: DeviceDetectorService,
     public script: ScriptService,
     public virtualRouter: virtualRouter,
-    public global: GlobalService
+    public global: GlobalService,
+    public auth:AuthRESTService
     ) {
 
 
@@ -73,7 +84,7 @@ export class AppComponent {
       .catch(error => console.log(error));
       this.global.getConfig();
       this.epicFunction();
-      // this.global.isLogin();
+       this.global.isLogin();
 
     }
     ngOnInit(): void {
@@ -89,7 +100,7 @@ export class AppComponent {
       );
       this.global.getEmployes().subscribe(
         (data) => {
-          this.global.employes = data.items; // Asigna los registros obtenidos a la variable 'registros'
+          this.global.products = data.items; // Asigna los registros obtenidos a la variable 'registros'
           // console.log(data); // respuesta
         },
         (error) => {

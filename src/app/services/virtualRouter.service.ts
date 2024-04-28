@@ -9,7 +9,7 @@ export class virtualRouter {
   ){
 
   }
-   routerActive:string= "user-home";
+   routerActive:string= "admin-home";
    setRoute(route: string) {
     const userType = this.authRESTService.getType();
   
@@ -19,7 +19,10 @@ export class virtualRouter {
           case 'admin':
             this.routerActive = 'admin-home';
             break;
-          case 'employe':
+          case 'customer':
+            this.routerActive = 'user-home';
+            break;
+            case 'visit':
             this.routerActive = 'user-home';
             break;
           default:
@@ -31,7 +34,7 @@ export class virtualRouter {
           case 'admin':
             this.routerActive = 'admin-payments';
             break;
-          case 'employe':
+          case 'customer':
             this.routerActive = 'user-payments';
             break;
           default:
@@ -41,12 +44,15 @@ export class virtualRouter {
       case 'settings':
         this.routerActive = 'settings';
           break;
+          case 'about':
+            this.routerActive = 'about';
+              break;
       case 'requests':
         switch (userType) {
           case 'admin':
             this.routerActive = 'admin-requests';
             break;
-          case 'employe':
+          case 'customer':
             this.routerActive = 'user-requests';
             break;
           default:

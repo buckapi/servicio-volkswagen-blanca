@@ -1,95 +1,95 @@
 {
-  "hash": "91d7bf72",
-  "browserHash": "f15b69d8",
+  "hash": "2a950d46",
+  "browserHash": "03503836",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "da4d4435",
+      "fileHash": "6679cb10",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "6488918a",
+      "fileHash": "64fa626b",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "9283436b",
+      "fileHash": "eb2b2bd7",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "efc672c9",
+      "fileHash": "0c8d4859",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "9ad6bd29",
+      "fileHash": "bb865970",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "5576805f",
+      "fileHash": "cdb06901",
       "needsInterop": false
     },
     "@apollo/client/core": {
       "src": "../../../../../node_modules/@apollo/client/core/index.js",
       "file": "@apollo_client_core.js",
-      "fileHash": "a5216110",
+      "fileHash": "23b44a49",
       "needsInterop": false
     },
     "apollo-angular": {
       "src": "../../../../../node_modules/apollo-angular/fesm2022/ngApollo.mjs",
       "file": "apollo-angular.js",
-      "fileHash": "b9dd3acb",
+      "fileHash": "9a11cb50",
       "needsInterop": false
     },
     "apollo-angular/http": {
       "src": "../../../../../node_modules/apollo-angular/fesm2022/ngApolloLinkHttp.mjs",
       "file": "apollo-angular_http.js",
-      "fileHash": "7431d502",
+      "fileHash": "99773781",
       "needsInterop": false
     },
     "ng-gallery": {
       "src": "../../../../../node_modules/ng-gallery/fesm2022/ng-gallery.mjs",
       "file": "ng-gallery.js",
-      "fileHash": "206416ff",
+      "fileHash": "2bded17e",
       "needsInterop": false
     },
     "ngx-device-detector": {
       "src": "../../../../../node_modules/ngx-device-detector/fesm2022/ngx-device-detector.mjs",
       "file": "ngx-device-detector.js",
-      "fileHash": "69a64f55",
+      "fileHash": "2bbd91cf",
       "needsInterop": false
     },
     "ngx-spinner": {
       "src": "../../../../../node_modules/ngx-spinner/fesm2022/ngx-spinner.mjs",
       "file": "ngx-spinner.js",
-      "fileHash": "771fa934",
+      "fileHash": "223a806a",
       "needsInterop": false
     },
     "pocketbase": {
       "src": "../../../../../node_modules/pocketbase/dist/pocketbase.es.mjs",
       "file": "pocketbase.js",
-      "fileHash": "04005ba0",
+      "fileHash": "dad99fc5",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "dee5a10c",
+      "fileHash": "0fb87091",
       "needsInterop": false
     },
     "rxjs/operators": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
       "file": "rxjs_operators.js",
-      "fileHash": "67e1985b",
+      "fileHash": "1629728b",
       "needsInterop": false
     }
   },

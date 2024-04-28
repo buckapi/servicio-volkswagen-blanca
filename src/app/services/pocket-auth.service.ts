@@ -9,7 +9,7 @@ export class PocketAuthService {
   private pb: PocketBase;
 
   constructor() {
-    this.pb = new PocketBase('http://127.0.0.1:8090');
+    this.pb = new PocketBase('https://db.buckapi.com:8090');
   }
 
   registerUser(email: string, password: string, type: string): Observable<any> {

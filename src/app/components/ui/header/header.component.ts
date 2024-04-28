@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AuthRESTService } from '@app/services/auth-rest.service';
 import { GlobalService } from '@app/services/global.service';
+import { virtualRouter } from '@app/services/virtualRouter.service';
 
 @Component({
   selector: 'app-header',
@@ -10,5 +12,8 @@ import { GlobalService } from '@app/services/global.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-constructor(public global:GlobalService){}
+constructor(
+  public auth:AuthRESTService,
+  public global:GlobalService,
+  public vR:virtualRouter){}
 }

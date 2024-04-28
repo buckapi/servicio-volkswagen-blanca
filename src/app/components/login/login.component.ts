@@ -102,7 +102,7 @@ export class LoginComponent {
           case 'admin':
             this.virtualRouter.routerActive = "admin-home";
             break;
-          case 'employe':
+          case 'customer':
             this.virtualRouter.routerActive = "user-home";
             break;
           default:

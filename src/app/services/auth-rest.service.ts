@@ -11,7 +11,10 @@ import { PocketAuthService } from '@services/pocket-auth.service'; // Importa el
 export class AuthRESTService {
   constructor(
 	private http: HttpClient
-	) { }
+	) { 
+		
+
+	}
 	headers : HttpHeaders = new HttpHeaders({
 		"Content-Type":"application/json"
 		});
@@ -46,6 +49,17 @@ export class AuthRESTService {
   	setToken(token:any): void{
   		localStorage.setItem("accessToken",token);
   	}
+	itsAdmin() {
+		let type = localStorage.getItem("type");
+		if (type === 'admin') {
+			return true;
+		} 
+			return false; 
+	}
+	isLoggedin(){
+		return  localStorage.getItem("isLoggedin");
+	}
+	
 	getToken(){
 	 	return localStorage.getItem("accessToken");
 	  }

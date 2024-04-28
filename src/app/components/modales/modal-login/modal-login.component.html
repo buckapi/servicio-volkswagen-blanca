@@ -1,0 +1,16 @@
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog quickview__main--wrapper modal-dialog-centered">
+        <div class="modal-content quickview__main__content">
+            <div class="modal-header quickview_m_header">
+                <button type="button" class="btn-close quickview__close--btn" data-bs-dismiss="modal"
+                    aria-label="Close">✕</button>
+            </div>
+
+            <div class="modal-body" *ngIf="!auth.isLoggedin()">
+                <app-sign-in [hidden]="global.registring"></app-sign-in>
+                <app-sign-up [hidden]="!global.registring"></app-sign-up>
+            </div>
+        </div>
+    </div>
+    
+</div>

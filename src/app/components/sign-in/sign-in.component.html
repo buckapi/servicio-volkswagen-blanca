@@ -1,3 +1,4 @@
+<form  [formGroup]="ngFormLogin" (ngSubmit)="onLogin()">
 <div class="account__login">
     <div class="account__login--header mb-25">
         <h2 class="account__login--header__title mb-10">Inicio de sesión</h2>
@@ -5,11 +6,36 @@
     </div>
     <div class="account__login--inner">
         <label>
-            <input class="account__login--input" placeholder="Email" type="email">
+            <!-- <input class="account__login--input" placeholder="Email" type="email"> -->
+
+
+            <div class="form-input">
+                <input type="text" class="form-control account__login--input" id="email" placeholder="Email" formControlName="email" required [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                  <div *ngIf="f['email'].errors['required']">El email requerido
+                  </div>
+                </div>
+            </div>
         </label>
         <label>
-            <input class="account__login--input" placeholder="Contraseña" type="password">
+            <!-- <input class="account__login--input" placeholder="Contraseña" type="password"> -->
+            <div class="input-group password-check">
+                <span class="input-affix-wrapper affix-wth-text">
+                    <!-- <input class="form-control" placeholder="Ingrese su contraseña" value="" type="password"> -->
+                    <input type="password" class="form-control account__login--input" id="password" placeholder="*******" formControlName="password" required [ngClass]="{ 'is-invalid': submitted && f['password'].errors}">
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">Contraseña requerida</div>
+                </div>
+                    <a href="#" class="input-suffix text-primary text-uppercase fs-8 fw-medium">
+                        <span>Mostrar</span>
+                        <span class="d-none">Ocultar</span>
+                    </a>
+                </span>
+            </div>
         </label>
+        <div [hidden]="!isError">
+            <span style="color:red;">{{message}}</span> 
+          </div>
         <div class="account__login--remember__forgot mb-15 d-flex justify-content-between align-items-center">
             <div class="account__login--remember position__relative">
                 <input class="checkout__checkbox--input" id="check1" type="checkbox">
@@ -31,3 +57,4 @@
         <p class="account__login--signup__text">No tienes cuenta aún? <span style="color: red; cursor: pointer;" (click)="global.signUp()">Regístrate</span></p>
     </div>
 </div>
+</form>

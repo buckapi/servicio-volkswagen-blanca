@@ -19,6 +19,7 @@ export class GlobalService {
   private apiUrl = environment.apiUrl;
   private apirestUrl = environment.apirestUrl;
   employes: any[] = [];
+  products: any[] = [];
   registring: boolean = false;
   configs: any[] = [];
   modaltype='login';
@@ -89,13 +90,14 @@ export class GlobalService {
     this.getConfig().subscribe((config) => {
       if (isLoggedIn === null || isLoggedIn === undefined) {
         // Si no existe, redirigir a la página de inicio de sesión
-        this.virtuallRouter.routerActive = 'login';
+        this.virtuallRouter.routerActive = 'user-home';
+        localStorage.setItem("type",'visit');
       } else {
         // Si existe, verificar el valor de type
         if (type === 'admin') {
           // Si es admin, redirigir a la página de inicio de administrador
-          this.virtuallRouter.routerActive = 'admin-home';
-        } else if (type === 'employe') {
+          this.virtuallRouter.routerActive = 'admin-dashboard';
+        } else if (type === 'customer') {
           // Si es empleado, redirigir a la página de inicio de usuario
           this.virtuallRouter.routerActive = 'user-home';
         } else {
