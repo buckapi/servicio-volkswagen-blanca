@@ -1,0 +1,133 @@
+{
+  "hash": "6b82cad6",
+  "configHash": "4c9e85a1",
+  "lockfileHash": "f5ac3782",
+  "browserHash": "12f462e1",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "5db7b917",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "821533a0",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "9b7eeaf1",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "1bfc06b7",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "dfb79197",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "c226bdf2",
+      "needsInterop": false
+    },
+    "@apollo/client/core": {
+      "src": "../../../../../node_modules/@apollo/client/core/index.js",
+      "file": "@apollo_client_core.js",
+      "fileHash": "531cf463",
+      "needsInterop": false
+    },
+    "apollo-angular": {
+      "src": "../../../../../node_modules/apollo-angular/fesm2022/ngApollo.mjs",
+      "file": "apollo-angular.js",
+      "fileHash": "20b73554",
+      "needsInterop": false
+    },
+    "apollo-angular/http": {
+      "src": "../../../../../node_modules/apollo-angular/fesm2022/ngApolloLinkHttp.mjs",
+      "file": "apollo-angular_http.js",
+      "fileHash": "873f2c89",
+      "needsInterop": false
+    },
+    "ng-gallery": {
+      "src": "../../../../../node_modules/ng-gallery/fesm2022/ng-gallery.mjs",
+      "file": "ng-gallery.js",
+      "fileHash": "3fee26fb",
+      "needsInterop": false
+    },
+    "ngx-device-detector": {
+      "src": "../../../../../node_modules/ngx-device-detector/fesm2022/ngx-device-detector.mjs",
+      "file": "ngx-device-detector.js",
+      "fileHash": "63c02eaf",
+      "needsInterop": false
+    },
+    "ngx-spinner": {
+      "src": "../../../../../node_modules/ngx-spinner/fesm2022/ngx-spinner.mjs",
+      "file": "ngx-spinner.js",
+      "fileHash": "6d110b36",
+      "needsInterop": false
+    },
+    "pocketbase": {
+      "src": "../../../../../node_modules/pocketbase/dist/pocketbase.es.mjs",
+      "file": "pocketbase.js",
+      "fileHash": "9ec8d122",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "bac9b290",
+      "needsInterop": false
+    },
+    "rxjs/operators": {
+      "src": "../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
+      "file": "rxjs_operators.js",
+      "fileHash": "71b43512",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-JK6J4DAX": {
+      "file": "chunk-JK6J4DAX.js"
+    },
+    "chunk-EWCHLUP4": {
+      "file": "chunk-EWCHLUP4.js"
+    },
+    "chunk-GIU7EKBS": {
+      "file": "chunk-GIU7EKBS.js"
+    },
+    "chunk-H2PSJ2UH": {
+      "file": "chunk-H2PSJ2UH.js"
+    },
+    "chunk-QVC5CV34": {
+      "file": "chunk-QVC5CV34.js"
+    },
+    "chunk-G6LAGCMS": {
+      "file": "chunk-G6LAGCMS.js"
+    },
+    "chunk-NY6QSHNF": {
+      "file": "chunk-NY6QSHNF.js"
+    },
+    "chunk-4SKER6FJ": {
+      "file": "chunk-4SKER6FJ.js"
+    },
+    "chunk-ERI3AVJI": {
+      "file": "chunk-ERI3AVJI.js"
+    },
+    "chunk-J2SOPSV6": {
+      "file": "chunk-J2SOPSV6.js"
+    },
+    "chunk-LJ4VCL4A": {
+      "file": "chunk-LJ4VCL4A.js"
+    }
+  }
+}

@@ -21,6 +21,7 @@ export class GlobalService {
   employes: any[] = [];
   products: any[] = [];
   registring: boolean = false;
+  preview:any={};
   configs: any[] = [];
   modaltype='login';
   info = {
@@ -81,7 +82,10 @@ export class GlobalService {
   getCategories(): Observable<any> {
     return this.http.get<any>(this.apirestUrl + 'collections/svbCategories/records');
   }
-
+setPreview(object:any){
+  this.preview=this.products[object];
+  console.log("object as preview seted: "+JSON.stringify(this.preview))
+}
   isLogin() {
     // Obtener el valor de isLoggedin del localStorage
     const isLoggedIn = localStorage.getItem('isLoggedin');

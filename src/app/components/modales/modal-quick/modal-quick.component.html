@@ -70,7 +70,7 @@
                         </div>
                         <div class="product__media--nav swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" *ngFor="let image of global.preview.images">
                                     <div class="product__media--nav__items">
                                         <img class="product__media--nav__items--img" src="assets/partsix/img/product/small-product/product1.webp" alt="product-nav-img">
                                     </div>
@@ -108,10 +108,10 @@
                 <div class="col">
                     <div class="quickview__info">
                         <form action="index.html#">
-                            <h2 class="product__details--info__title mb-15">Special offer in Pc products </h2>
+                            <h2 class="product__details--info__title mb-15">{{global.preview.name}} </h2>
                                 
                             <div class="product__card--price mb-15">
-                                <span class="current__price">$239.52</span>
+                                <span class="current__price">${{global.preview.price}}</span>
                                 <span class="old__price"> $362.00</span>
                             </div>
                             <ul class="rating product__card--rating mb-20 d-flex">

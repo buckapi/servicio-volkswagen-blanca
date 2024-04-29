@@ -1,0 +1,11 @@
+.variant__color--value {
+    display: inline-block;
+    position: relative;
+}
+
+.circle {
+    width: 20px; /* ajusta el tamaño del círculo según tu diseño */
+    height: 20px; /* ajusta el tamaño del círculo según tu diseño */
+    border-radius: 50%; /* esto hará que el div sea un círculo */
+    border: 1px solid #ccc; /* opcional: borde para el círculo */
+}
